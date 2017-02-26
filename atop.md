@@ -21,9 +21,15 @@ Once installed, you can launch it similar to top using:
 ```
 atop
 ```
-Description of some components of the main window  
+Description of some components of the main window: 
 
-![First line](/atopImages/l1.png)
+![line one](/atopImages/l1.png)
+![line two](/atopImages/l2.png)
+![line tree](/atopImages/l4.png)
+![line four](/atopImages/l3.png)
+![line five](/atopImages/l5.png)
+![line six](/atopImages/l6.png)
+![line seven](/atopImages/l7.png)
 
 ### Other useful commands:  
 
