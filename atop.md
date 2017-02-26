@@ -11,51 +11,43 @@ Is a ASCII full-screen performance monitor which can log and report the activity
 
 Once atop is launched, by default it will show system activity for CPU, memory, swap, disks and network in 10 second intervals. In addition, for each process and thread you can analyse CPU utilization, memory consumption, disk I/O, priority, username, state, and even exit codes.
 
+__Note__: go through the [*command’s man page*](https://linux.die.net/man/1/atop "page manual of command's") for more details on the output of the command.
+
 ### Install atop on Debian/Ubuntu Linux
 ```bash
 apt-get install atop
 ```
-Once installed on any distro, you can launch it similar to top using:
+Once installed, you can launch it similar to top using:
 ```
 atop
 ```
+Description of some components of the main window  
+
+![First line](/atopImages/l1.png)
+
 ### Other useful commands:  
-Launch with average-per-second total values:
-```
-atop -1
-```
+
+>Launch with average-per-second total values:
+__atop -1__  
 Launch with active processes only:
-```
-atop -a
-```
+__atop -a__  
 Launch with command line per process
-```
-atop -c
-```
+__atop -c__  
 Launch with disk info
-```
-atop -d
-```
+__atop -d__  
 Launch with memory info
-```
-atop -m
-```
+__atop -m__  
 Launch with network info
-```
-atop -n
-```
+__atop -n__  
 Launch with scheduling info
-```
-atop -s
-```
+__atop -s__  
 Launch with various info (ppid, user, time)
-```
-atop -v
-```
+__atop -v__  
+
 Once atop is running, press the following shortcut keys to sort processes:
 
 * a – sort in order of most active resource.
-* c – revert to sorting by cpu consumption (default).
+* c – sort in order of command line of the process.
 * d – sort in order of disk activity.
 * m – sort in order of memory usage
 * n – sort in order of network activity
