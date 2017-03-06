@@ -31,7 +31,61 @@ Description of some components of the main window:
 ![line six](/atopImages/l6.png)
 ![line seven](/atopImages/l7.png)
 
-### Other useful commands:  
+
+### Interactive commands:
+__g__ --> Show generic output (default):
+![g command](/atopImages/InteractiveCommands_g.png)
+
+__m__ --> Show memory related output:
+![m command](/atopImages/InteractiveCommands_m.png)
+
+__d__ --> Show disk-related output:
+![d command](/atopImages/InteractiveCommands_d.png)
+
+__n__ --> Show network related output:
+![n command](/atopImages/InteractiveCommands_n.png)
+
+__s__ --> Show sheduling characteristics:
+![s command](/atopImages/InteractiveCommands_s.png)
+
+__v__ --> Show various process characteristics:
+![v command](/atopImages/InteractiveCommands_v.png)
+
+__c__ --> Show the command line of the process:
+![c command](/atopImages/InteractiveCommands_c.png)
+
+__o__ --> Show the user-defined line of the process:
+
+### Acumulated commands:
+__u__ --> Show the process activity acumulated per user:
+![u command](/atopImages/InteractiveCommands_u.png)
+
+__p__ --> Show the process activity acumulated per program:
+![p command](/atopImages/InteractiveCommands_p.png)
+
+### Sort current list commands:
+
+__C__ --> In order of CPU consumption(default):
+![C command](/atopImages/SortCurrentListCommands_C.png)
+
+__M__ --> In order of resident memory consumption:
+![M command](/atopImages/SortCurrentListCommands_M.png)
+
+__D__ --> In order of disk accesses isued:
+![D command](/atopImages/SortCurrentListCommands_D.png)
+
+__N__ --> In order of network packets received/transmited:
+![N command](/atopImages/SortCurrentListCommands_N.png)
+
+__A__ --> In order of the most busy sistem resource:
+![A command](/atopImages/SortCurrentListCommands_A.png)
+
+### Selection commands:
+__U__ --> Focus on specific username:
+![U command](/atopImages/SelectionsCommands_U.png)
+
+__P__ --> Focus on specific process name:
+![P command](/atopImages/SelectionsCommands_P.png)
 
 >Launch with average-per-second total values:
 __atop -1__  
