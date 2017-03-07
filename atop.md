@@ -64,7 +64,6 @@ __p__ --> Show the process activity acumulated per program:
 ![p command](/atopImages/InteractiveCommands_p.png)
 
 ### Sort current list commands:
-
 __C__ --> In order of CPU consumption(default):
 ![C command](/atopImages/SortCurrentListCommands_C.png)
 
@@ -87,27 +86,53 @@ __U__ --> Focus on specific username:
 __P__ --> Focus on specific process name:
 ![P command](/atopImages/SelectionsCommands_P.png)
 
->Launch with average-per-second total values:
-__atop -1__  
-Launch with active processes only:
-__atop -a__  
-Launch with command line per process
-__atop -c__  
-Launch with disk info
-__atop -d__  
-Launch with memory info
-__atop -m__  
-Launch with network info
-__atop -n__  
-Launch with scheduling info
-__atop -s__  
-Launch with various info (ppid, user, time)
-__atop -v__  
+### Presentation commands (toggle):
+__a__ --> All processes/only active processes will be shown
 
-Once atop is running, press the following shortcut keys to sort processes:
+__f__ --> Fixate on static range of header-lines: Only active system-resources/inactive system resources will be shown
 
-* a – sort in order of most active resource.
-* c – sort in order of command line of the process.
-* d – sort in order of disk activity.
-* m – sort in order of memory usage
-* n – sort in order of network activity
+__x__ --> Colors/no colors to indicate high ocupation
+
+__1__ --> Show average-per-second I.S.O. total values
+
+__y__ --> show the inv¡dividual treads whitin a process
+![y command](/atopImages/presentationCommands_y.png)
+
+### Screen-Handing:
+__^L__ --> Redraw the screen
+
+__^F__ --> Show next page in the process list
+
+__^B__ --> Show previous page in the process list
+
+### Miscellaneous commands:
+__i__ --> Change ingerval timer of the samples
+
+__t__ --> Manula trigger to force next sample
+
+__r__ --> Rese couners to boot time values
+
+__z__ --> Pause-button for freeze current sample
+
+__l__ --> Limited lines per CPU-disk and interface sources
+
+__k__ --> Kill a process
+
+__V__ --> Version information
+
+__q__ --> Quit this
+
+## RAW DATA STORAGE
+atop can store the system and process level statistics in	compressed binary format	in a raw	file with the flag	__-w__ followed by the __filename__. If this file already exists and is recognized	as a raw	data file, atop will append new samples to the file (starting with a sample which reflects the activity since boot); if the file does not exist, it will be created.
+
+A raw file can be read and visualized again with the flag __-r__ followed by the __filename__. If no filename is specified, the file
+/var/log/atop/atop_YYYYNMDC is opened for input (where YYYYNMDC are digits representing the current date).
+
+### Raw file viewing:
+__t__ --> Show next sample in raw file
+
+__T__ --> Show previowu sample in raw file
+
+__b__ --> Branch to certain time in raw file
+
+__r__ --> Rewind to begin of raw file
