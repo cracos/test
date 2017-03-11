@@ -9,7 +9,7 @@ Is a ASCII full-screen performance monitor which can log and report the activity
 * Includes _disk I/O_ and _network_ utilization.
 * Uses [*netatop*](http://www.atoptool.nl/netatop.php "netatop page") kernel module to monitor TCP & UDP and network bandwidth.  
 
-Once atop is launched, by default it will show system activity for CPU, memory, swap, disks and network in 10 second intervals. In addition, for each process and thread you can analyse CPU utilization, memory consumption, disk I/O, priority, username, state, and even exit codes.
+Once atop is launched, by default it will show system activity for CPU, memory, swap, disks and network in 10 second intervals. In addition, for each process and thread you can analyze CPU utilization, memory consumption, disk I/O, priority, username, state, and even exit codes.
 
 __Note__: go through the [*command’s man page*](https://linux.die.net/man/1/atop "page manual of command's") for more details on the output of the command.
 
@@ -45,7 +45,7 @@ __d__ --> Show disk-related output:
 __n__ --> Show network related output:
 ![n command](/atopImages/InteractiveCommands_n.png)
 
-__s__ --> Show sheduling characteristics:
+__s__ --> Show scheduling characteristics:
 ![s command](/atopImages/InteractiveCommands_s.png)
 
 __v__ --> Show various process characteristics:
@@ -56,11 +56,11 @@ __c__ --> Show the command line of the process:
 
 __o__ --> Show the user-defined line of the process:
 
-### Acumulated commands:
-__u__ --> Show the process activity acumulated per user:
+### Accumulated commands:
+__u__ --> Show the process activity accumulated per user:
 ![u command](/atopImages/InteractiveCommands_u.png)
 
-__p__ --> Show the process activity acumulated per program:
+__p__ --> Show the process activity c per program:
 ![p command](/atopImages/InteractiveCommands_p.png)
 
 ### Sort current list commands:
@@ -70,13 +70,13 @@ __C__ --> In order of CPU consumption(default):
 __M__ --> In order of resident memory consumption:
 ![M command](/atopImages/SortCurrentListCommands_M.png)
 
-__D__ --> In order of disk accesses isued:
+__D__ --> In order of disk accesses issued:
 ![D command](/atopImages/SortCurrentListCommands_D.png)
 
-__N__ --> In order of network packets received/transmited:
+__N__ --> In order of network packets received/transmitted:
 ![N command](/atopImages/SortCurrentListCommands_N.png)
 
-__A__ --> In order of the most busy sistem resource:
+__A__ --> In order of the most busy system resource:
 ![A command](/atopImages/SortCurrentListCommands_A.png)
 
 ### Selection commands:
@@ -91,11 +91,11 @@ __a__ --> All processes/only active processes will be shown
 
 __f__ --> Fixate on static range of header-lines: Only active system-resources/inactive system resources will be shown
 
-__x__ --> Colors/no colors to indicate high ocupation
+__x__ --> Colors/no colors to indicate high occupation
 
 __1__ --> Show average-per-second I.S.O. total values
 
-__y__ --> show the inv¡dividual treads whitin a process
+__y__ --> show the individual treads within a process
 ![y command](/atopImages/presentationCommands_y.png)
 
 ### Screen-Handing:
@@ -106,11 +106,11 @@ __^F__ --> Show next page in the process list
 __^B__ --> Show previous page in the process list
 
 ### Miscellaneous commands:
-__i__ --> Change ingerval timer of the samples
+__i__ --> Change interval timer of the samples
 
-__t__ --> Manula trigger to force next sample
+__t__ --> Manual trigger to force next sample
 
-__r__ --> Rese couners to boot time values
+__r__ --> Rese counters to boot time values
 
 __z__ --> Pause-button for freeze current sample
 
@@ -123,7 +123,7 @@ __V__ --> Version information
 __q__ --> Quit this
 
 ## RAW DATA STORAGE
-atop can store the system and process level statistics in	compressed binary format	in a raw	file with the flag	__-w__ followed by the __filename__. If this file already exists and is recognized	as a raw	data file, atop will append new samples to the file (starting with a sample which reflects the activity since boot); if the file does not exist, it will be created.
+Atop can store the system and process level statistics in	compressed binary format	in a raw	file with the flag	__-w__ followed by the __filename__. If this file already exists and is recognized	as a raw	data file, atop will append new samples to the file (starting with a sample which reflects the activity since boot); if the file does not exist, it will be created.
 
 A raw file can be read and visualized again with the flag __-r__ followed by the __filename__. If no filename is specified, the file
 /var/log/atop/atop_YYYYNMDC is opened for input (where YYYYNMDC are digits representing the current date).
@@ -131,7 +131,7 @@ A raw file can be read and visualized again with the flag __-r__ followed by the
 ### Raw file viewing:
 __t__ --> Show next sample in raw file
 
-__T__ --> Show previowu sample in raw file
+__T__ --> Show previous sample in raw file
 
 __b__ --> Branch to certain time in raw file
 
