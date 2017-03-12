@@ -88,9 +88,11 @@ __``U``__ --> Untag all processes (remove all tags added with the Space key).
 __``s``__ --> Trace process system calls: if strace(1) is installed, pressing this key will attach it to the currently selected process, presenting a live update of system calls issued by the process.  
 
 __``l``__ --> Display open files for a process: if lsof(1) is installed, pressing this key will display the list of file descriptors opened by the process.  
+
 ![Open files](/htopImages/screenshot_09.png)  
 
 __``F1, h, ?``__ --> Go to the help screen  
+
 ![Help screen](/htopImages/screenshot_10.png)  
 
 __``F2, S``__ --> Go to the setup screen, where you can configure the meters displayed at the top of the screen, set various display options, choose among color schemes, and select which columns are displayed, in which order.  
@@ -115,6 +117,7 @@ __``F8, [``__ --> Decrease the selected process's priority (add to 'nice' value)
 __``F9, k``__ --> "Kill" process: sends a signal which is selected in a menu, to one or a group of processes. If processes were tagged, sends the signal to all tagged processes. If none is tagged, sends to the currently selected process.  
 
 __``F10, q``__ --> Quit  
+
 ======
 __``I``__ --> Invert the sort order: if sort order is increasing, switch to decreasing, and vice-versa.  
 
