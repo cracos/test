@@ -67,31 +67,41 @@ Output version information and exit  ``atop -v``
 # Interactive Commands
 The following commands are supported while in htop:  
 __Arrows, PgUP, PgDn, Home, End__  
-Scroll the process list.
+Scroll the process list.  
 __Space__  
 Tag or untag a process. Commands that can operate on multiple processes, like "kill", will then apply over the list of tagged processes, instead of the currently highlighted one.  
+![](/htopImages/screenshot_.png)  
 __U__  
 Untag all processes (remove all tags added with the Space key).  
 __s__  
 Trace process system calls: if strace(1) is installed, pressing this key will attach it to the currently selected process, presenting a live update of system calls issued by the process.  
 __l__  
 Display open files for a process: if lsof(1) is installed, pressing this key will display the list of file descriptors opened by the process.  
+![](/htopImages/screenshot_.png)  
 __F1, h, ?__  
 Go to the help screen  
+![](/htopImages/screenshot_.png)  
 __F2, S__  
 Go to the setup screen, where you can configure the meters displayed at the top of the screen, set various display options, choose among color schemes, and select which columns are displayed, in which order.  
+![](/htopImages/screenshot_.png)  
 __F3, /__  
 Incrementally search the command lines of all the displayed processes. The currently selected (highlighted) command will update as you type. While in search mode, pressing F3 will cycle through matching occurrences.  
+![](/htopImages/screenshot_.png)  
 __F4, \\__  
 Incremental process filtering: type in part of a process command line and only processes whose names match will be shown. To cancel filtering, enter the Filter option again and press Esc.  
+![](/htopImages/screenshot_.png)  
 __F5, t__  
 Tree view: organize processes by parenthood, and layout the relations between them as a tree. Toggling the key will switch between tree and your previously selected sort view. Selecting a sort view will exit tree view.  
+![](/htopImages/screenshot_.png)  
 __F6, <, >__  
 Select a field for sorting. The current sort field is indicated by a highlight in the header  
+![](/htopImages/screenshot_.png)  
 __F7, ]__  
 Increase the selected process's priority (subtract from 'nice' value). This can only be done by the superuser.  
+
 __F8, [__  
 Decrease the selected process's priority (add to 'nice' value)  
+
 __F9, k__  
 "Kill" process: sends a signal which is selected in a menu, to one or a group of processes. If processes were tagged, sends the signal to all tagged processes. If none is tagged, sends to the currently selected process.  
 __F10, q__  
