@@ -37,98 +37,109 @@ After installation, launch htop by entering:
 ``` 
 htop
 ```
+======
 Default htop screen:  
 ![Default screen](/htopImages/screenshot_01.png)  
-
+======
 # Command-line Options
 
 Mandatory arguments to long options are madatory for short options too.  
-__-d --delay=DELAY__  
+
+__``-d --delay=DELAY``__  
 Delay between updates, in tenths of seconds ``atop -d 3``  
-__-C --no-color --no-colour__  
+
+__``-C --no-color --no-colour``__  
 Start htop in monochrome mode ``atop -C``  
 ![No color](/htopImages/screenshot_02.png)  
-__-h --help__  
+
+__``-h --help``__  
 Display a help message and exit ``atop -h``  
+
 ![Help](/htopImages/screenshot_03.png)  
-__-u --user=USERNAME__  
+
+__``-u --user=USERNAME``__  
 Show only the processes of a given user ``atop -u username``  
 ![Username](/htopImages/screenshot_04.png)  
-__-p__  
+
+__``-p``__  
 Start working thread for pagemap memory stats ``atop -p PIDnumber``  
 ![PID number](/htopImages/screenshot_05.png)  
-__-s --sort-key COLUMN__  
+
+__``-s --sort-key COLUMN``__  
 Sort by this column (use --sort-key help for a column list) ``atop -s nameofcolumn``  
 ![Sort](/htopImages/screenshot_06.png)  
-__-v --version__  
+
+__``-v --version``__  
 Output version information and exit  ``atop -v``  
+
 ![Version](/htopImages/screenshot_07.png)  
 
 # Interactive Commands
+
 The following commands are supported while in htop:  
-__Arrows, PgUP, PgDn, Home, End__  
-Scroll the process list.  
-__Space__  
-Tag or untag a process. Commands that can operate on multiple processes, like "kill", will then apply over the list of tagged processes, instead of the currently highlighted one.  
+
+__``Arrows, PgUP, PgDn, Home, End``__ --> Scroll the process list.  
+
+__``Space``__ --> Tag or untag a process. Commands that can operate on multiple processes, like "kill", will then apply over the list of tagged processes, instead of the currently highlighted one.  
 ![Tag](/htopImages/screenshot_08.png)  
-__U__  
-Untag all processes (remove all tags added with the Space key).  
-__s__  
-Trace process system calls: if strace(1) is installed, pressing this key will attach it to the currently selected process, presenting a live update of system calls issued by the process.  
-__l__  
-Display open files for a process: if lsof(1) is installed, pressing this key will display the list of file descriptors opened by the process.  
+
+__``U``__ --> Untag all processes (remove all tags added with the Space key).  
+
+__``s``__ --> Trace process system calls: if strace(1) is installed, pressing this key will attach it to the currently selected process, presenting a live update of system calls issued by the process.  
+
+__``l``__ --> Display open files for a process: if lsof(1) is installed, pressing this key will display the list of file descriptors opened by the process.  
 ![Open files](/htopImages/screenshot_09.png)  
-__F1, h, ?__  
-Go to the help screen  
+
+__``F1, h, ?``__ --> Go to the help screen  
 ![Help screen](/htopImages/screenshot_10.png)  
-__F2, S__  
-Go to the setup screen, where you can configure the meters displayed at the top of the screen, set various display options, choose among color schemes, and select which columns are displayed, in which order.  
+
+__``F2, S``__ --> Go to the setup screen, where you can configure the meters displayed at the top of the screen, set various display options, choose among color schemes, and select which columns are displayed, in which order.  
 ![Setup screen](/htopImages/screenshot_11.png)  
-__F3, /__  
-Incrementally search the command lines of all the displayed processes. The currently selected (highlighted) command will update as you type. While in search mode, pressing F3 will cycle through matching occurrences.  
+
+__``F3, /``__ --> Incrementally search the command lines of all the displayed processes. The currently selected (highlighted) command will update as you type. While in search mode, pressing F3 will cycle through matching occurrences.  
 ![Incrementally command](/htopImages/screenshot_12.png)  
-__F4, \\__  
-Incremental process filtering: type in part of a process command line and only processes whose names match will be shown. To cancel filtering, enter the Filter option again and press Esc.  
+
+__``F4, \``__ --> Incremental process filtering: type in part of a process command line and only processes whose names match will be shown. To cancel filtering, enter the Filter option again and press Esc.  
 ![Incrementally process](/htopImages/screenshot_13.png)  
-__F5, t__  
-Tree view: organize processes by parenthood, and layout the relations between them as a tree. Toggling the key will switch between tree and your previously selected sort view. Selecting a sort view will exit tree view.  
+
+__``F5, t``__ --> Tree view: organize processes by parenthood, and layout the relations between them as a tree. Toggling the key will switch between tree and your previously selected sort view. Selecting a sort view will exit tree view.  
 ![Tree view](/htopImages/screenshot_14.png)  
-__F6, <, >__  
-Select a field for sorting. The current sort field is indicated by a highlight in the header  
+
+__``F6, <, >``__ --> Select a field for sorting. The current sort field is indicated by a highlight in the header  
 ![Sorting](/htopImages/screenshot_15.png)  
-__F7, ]__  
-Increase the selected process's priority (subtract from 'nice' value). This can only be done by the superuser.  
-__F8, \[__  
-Decrease the selected process's priority (add to 'nice' value)  
-__F9, k__  
-"Kill" process: sends a signal which is selected in a menu, to one or a group of processes. If processes were tagged, sends the signal to all tagged processes. If none is tagged, sends to the currently selected process.  
-__F10, q__  
-Quit  
-__I__  
-Invert the sort order: if sort order is increasing, switch to decreasing, and vice-versa.  
-__+, -__  
-When in tree view mode, expand or collapse subtree. When a subtree is collapsed a "+" sign shows to the left of the process name.  
-__a__ (on multiprocessor machines)  
-Set CPU affinity: mark which CPUs a process is allowed to use.  
-__u__  
-Show only processes owned by a specified user.  
+
+__``F7, ]``__ --> Increase the selected process's priority (subtract from 'nice' value). This can only be done by the superuser.  
+
+__``F8, [``__ --> Decrease the selected process's priority (add to 'nice' value)  
+
+__``F9, k``__ --> "Kill" process: sends a signal which is selected in a menu, to one or a group of processes. If processes were tagged, sends the signal to all tagged processes. If none is tagged, sends to the currently selected process.  
+
+__``F10, q``__ --> Quit  
+======
+__``I``__ --> Invert the sort order: if sort order is increasing, switch to decreasing, and vice-versa.  
+
+__``+, -``__ --> When in tree view mode, expand or collapse subtree. When a subtree is collapsed a "+" sign shows to the left of the process name.  
+
+__``a``__ (on multiprocessor machines) --> Set CPU affinity: mark which CPUs a process is allowed to use.  
+
+__``u``__ --> Show only processes owned by a specified user.  
 ![User process](/htopImages/screenshot_16.png)  
-__M__  
-Sort by memory usage (top compatibility key).  
+
+__``M``__ --> Sort by memory usage (top compatibility key).  
 ![Sort by mem](/htopImages/screenshot_17.png)  
-__P__  
-Sort by processor usage (top compatibility key).  
+
+__``P``__ --> Sort by processor usage (top compatibility key).  
 ![Sort by process](/htopImages/screenshot_18.png)  
-__T__  
-Sort by time (top compatibility key).  
+
+__``T``__ --> Sort by time (top compatibility key).  
 ![Sort by time](/htopImages/screenshot_19.png)  
-__F__  
-"Follow" process: if the sort order causes the currently selected process to move in the list, make the selection bar follow it. This is useful for monitoring a process: this way, you can keep a process always visible on screen. When a movement key is used, "follow" loses effect.  
-__K__  
-Hide kernel threads: prevent the threads belonging the kernel to be displayed in the process list. (This is a toggle key.)  
+
+__``F``__ --> "Follow" process: if the sort order causes the currently selected process to move in the list, make the selection bar follow it. This is useful for monitoring a process: this way, you can keep a process always visible on screen. When a movement key is used, "follow" loses effect.  
+
+__``K``__ --> Hide kernel threads: prevent the threads belonging the kernel to be displayed in the process list. (This is a toggle key.)  
 ![Hide kernel](/htopImages/screenshot_20.png)  
-__H__  
-Hide user threads: on systems that represent them differently than ordinary processes (such as recent NPTL-based systems), this can hide threads from userspace processes in the process list. (This is a toggle key.)  
+
+__``H``__ --> Hide user threads: on systems that represent them differently than ordinary processes (such as recent NPTL-based systems), this can hide threads from userspace processes in the process list. (This is a toggle key.)  
 ![Hide user](/htopImages/screenshot_21.png)  
-__Ctrl-L__  
-Refresh: redraw screen and recalculate values.  
+
+__``Ctrl-L``__ --> Refresh: redraw screen and recalculate values.  
