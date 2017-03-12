@@ -98,7 +98,7 @@ Select a field for sorting. The current sort field is indicated by a highlight i
 ![Sorting](/htopImages/screenshot_15.png)  
 __F7, ]__  
 Increase the selected process's priority (subtract from 'nice' value). This can only be done by the superuser.  
-__F8, [__  
+__F8, \[__  
 Decrease the selected process's priority (add to 'nice' value)  
 __F9, k__  
 "Kill" process: sends a signal which is selected in a menu, to one or a group of processes. If processes were tagged, sends the signal to all tagged processes. If none is tagged, sends to the currently selected process.  
