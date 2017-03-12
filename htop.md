@@ -13,7 +13,7 @@ In Debian you can fetch htop by typing:
 ```vim
 apt-get install htop 
 ```
-By Sources, building htop is straightforward, as it uses GNU Autotools: the typical``./configure; make; sudo make install should do the trick.``  
+By Sources, building htop is straightforward, as it uses GNU Autotools: the typical``./configure; make; sudo make install`` should do the trick.  
 Check out the [lastest version](http://hisham.hm/htop/releases) at the project page.  
 
 Run the configure script to prepare for compilation.
@@ -37,7 +37,7 @@ After installation, launch htop by entering:
 ``` 
 htop
 ```
-Default htop screen:
+Default htop screen:  
 ![Default screen](/htopImages/screenshot_01.png)  
 
 # Command-line Options
@@ -70,39 +70,65 @@ __Arrows, PgUP, PgDn, Home, End__
 Scroll the process list.  
 __Space__  
 Tag or untag a process. Commands that can operate on multiple processes, like "kill", will then apply over the list of tagged processes, instead of the currently highlighted one.  
-![](/htopImages/screenshot_.png)  
+![Tag](/htopImages/screenshot_08.png)  
 __U__  
 Untag all processes (remove all tags added with the Space key).  
 __s__  
 Trace process system calls: if strace(1) is installed, pressing this key will attach it to the currently selected process, presenting a live update of system calls issued by the process.  
 __l__  
 Display open files for a process: if lsof(1) is installed, pressing this key will display the list of file descriptors opened by the process.  
-![](/htopImages/screenshot_.png)  
+![Open files](/htopImages/screenshot_09.png)  
 __F1, h, ?__  
 Go to the help screen  
-![](/htopImages/screenshot_.png)  
+![Help screen](/htopImages/screenshot_10.png)  
 __F2, S__  
 Go to the setup screen, where you can configure the meters displayed at the top of the screen, set various display options, choose among color schemes, and select which columns are displayed, in which order.  
-![](/htopImages/screenshot_.png)  
+![Setup screen](/htopImages/screenshot_11.png)  
 __F3, /__  
 Incrementally search the command lines of all the displayed processes. The currently selected (highlighted) command will update as you type. While in search mode, pressing F3 will cycle through matching occurrences.  
-![](/htopImages/screenshot_.png)  
+![Incrementally command](/htopImages/screenshot_12.png)  
 __F4, \\__  
 Incremental process filtering: type in part of a process command line and only processes whose names match will be shown. To cancel filtering, enter the Filter option again and press Esc.  
-![](/htopImages/screenshot_.png)  
+![Incrementally process](/htopImages/screenshot_13.png)  
 __F5, t__  
 Tree view: organize processes by parenthood, and layout the relations between them as a tree. Toggling the key will switch between tree and your previously selected sort view. Selecting a sort view will exit tree view.  
-![](/htopImages/screenshot_.png)  
+![Tree view](/htopImages/screenshot_14.png)  
 __F6, <, >__  
 Select a field for sorting. The current sort field is indicated by a highlight in the header  
-![](/htopImages/screenshot_.png)  
+![Sorting](/htopImages/screenshot_15.png)  
 __F7, ]__  
 Increase the selected process's priority (subtract from 'nice' value). This can only be done by the superuser.  
-
 __F8, [__  
 Decrease the selected process's priority (add to 'nice' value)  
-
 __F9, k__  
 "Kill" process: sends a signal which is selected in a menu, to one or a group of processes. If processes were tagged, sends the signal to all tagged processes. If none is tagged, sends to the currently selected process.  
 __F10, q__  
 Quit  
+__I__  
+Invert the sort order: if sort order is increasing, switch to decreasing, and vice-versa.  
+__+, -__  
+When in tree view mode, expand or collapse subtree. When a subtree is collapsed a "+" sign shows to the left of the process name.  
+__a__ (on multiprocessor machines)  
+Set CPU affinity: mark which CPUs a process is allowed to use.  
+__u__  
+Show only processes owned by a specified user.  
+![User process](/htopImages/screenshot_16.png)  
+__M__  
+Sort by memory usage (top compatibility key).  
+![Sort by mem](/htopImages/screenshot_17.png)  
+__P__  
+Sort by processor usage (top compatibility key).  
+![Sort by process](/htopImages/screenshot_18.png)  
+__T__  
+Sort by time (top compatibility key).  
+![Sort by time](/htopImages/screenshot_19.png)  
+__F__  
+"Follow" process: if the sort order causes the currently selected process to move in the list, make the selection bar follow it. This is useful for monitoring a process: this way, you can keep a process always visible on screen. When a movement key is used, "follow" loses effect.  
+__K__  
+Hide kernel threads: prevent the threads belonging the kernel to be displayed in the process list. (This is a toggle key.)  
+![Hide kernel](/htopImages/screenshot_20.png)  
+__H__  
+Hide user threads: on systems that represent them differently than ordinary processes (such as recent NPTL-based systems), this can hide threads from userspace processes in the process list. (This is a toggle key.)  
+![Hide user](/htopImages/screenshot_21.png)  
+__Ctrl-L__  
+Refresh: redraw screen and recalculate values.  
