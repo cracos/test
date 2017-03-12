@@ -13,7 +13,9 @@ In Debian you can fetch htop by typing:
 ```vim
 apt-get install htop 
 ```
-By Sources, building htop is straightforward, as it uses GNU Autotools: the typical``./configure; make; sudo make install should do the trick.``
+By Sources, building htop is straightforward, as it uses GNU Autotools: the typical``./configure; make; sudo make install should do the trick.``  
+Check out the [lastest version](http://hisham.hm/htop/releases) at the project page.  
+
 Run the configure script to prepare for compilation.
 ```vim
 ./configure
@@ -31,5 +33,27 @@ Finally, build and install htop as follows.
 make
 sudo make install
 ```
-Check out the [lastest version](http://hisham.hm/htop/releases) at the project page.
+After installation, launch htop by entering:
+``` 
+htop
+```
+Default htop screen:
+![Default screen](/htopImages/defaultScreen.png)
 
+# Command-line Options
+
+Mandatory arguments to long options are madatory for short options too.  
+__-d --delay=DELAY__  
+Delay between updates, in tenths of seconds ``atop -d 3``  
+__-C --no-color --no-colour__  
+Start htop in monochrome mode ``atop -C``  
+__-h --help__  
+Display a help message and exit ``atop -h``  
+__-u --user=USERNAME__  
+Show only the processes of a given user ``atop -u username``  
+__-p__  
+Start working thread for pagemap memory stats ``atop -p PIDnumber``  
+__-s --sort-key COLUMN__  
+Sort by this column (use --sort-key help for a column list) ``atop -s nameofcolumn``   
+__-v --version__  
+Output version information and exit  ``atop -v``  
