@@ -34,11 +34,11 @@ make
 sudo make install
 ```
 After installation, launch htop by entering:
-``` 
+``` vim
 htop
 ```
-======
-Default htop screen:  
+
+### Default htop screen:  
 ![Default screen](/htopImages/screenshot_01.png)  
 ======
 # Command-line Options
