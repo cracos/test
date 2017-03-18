@@ -45,32 +45,29 @@ htop
 
 Mandatory arguments to long options are madatory for short options too.  
 
-__``-d --delay=DELAY``__  
-Delay between updates, in tenths of seconds ``atop -d 3``  
+__``-d --delay=DELAY``__ --> Delay between updates, in tenths of seconds ``atop -d 3``  
 
-__``-C --no-color --no-colour``__  
-Start htop in monochrome mode ``atop -C``  
+__``-C --no-color --no-colour``__ --> Start htop in monochrome mode ``atop -C``  
+
 ![No color](/htopImages/screenshot_02.png)  
 
-__``-h --help``__  
-Display a help message and exit ``atop -h``  
+__``-h --help``__ --> Display a help message and exit ``atop -h``  
 
 ![Help](/htopImages/screenshot_03.png)  
 
-__``-u --user=USERNAME``__  
-Show only the processes of a given user ``atop -u username``  
+__``-u --user=USERNAME``__ --> Show only the processes of a given user ``atop -u username``  
+
 ![Username](/htopImages/screenshot_04.png)  
 
-__``-p``__  
-Start working thread for pagemap memory stats ``atop -p PIDnumber``  
+__``-p``__ --> Start working thread for pagemap memory stats ``atop -p PIDnumber``  
+
 ![PID number](/htopImages/screenshot_05.png)  
 
-__``-s --sort-key COLUMN``__  
-Sort by this column (use --sort-key help for a column list) ``atop -s nameofcolumn``  
+__``-s --sort-key COLUMN``__ --> Sort by this column (use --sort-key help for a column list) ``atop -s nameofcolumn``  
+
 ![Sort](/htopImages/screenshot_06.png)  
 
-__``-v --version``__  
-Output version information and exit  ``atop -v``  
+__``-v --version``__ --> Output version information and exit  ``atop -v``  
 
 ![Version](/htopImages/screenshot_07.png)  
 
