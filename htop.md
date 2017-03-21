@@ -14,7 +14,7 @@ In Debian you can fetch htop by typing:
 apt-get install htop 
 ```
 By Sources, building htop is straightforward, as it uses GNU Autotools: the typical``./configure; make; sudo make install`` should do the trick.  
-Check out the [lastest version](http://hisham.hm/htop/releases) at the project page.  
+Check out the [latest version](http://hisham.hm/htop/releases) at the project page.  
 
 Run the configure script to prepare for compilation.
 ```vim
@@ -43,37 +43,37 @@ htop
 ======
 # Command-line Options
 
-Mandatory arguments to long options are madatory for short options too.  
+Mandatory arguments to long options are mandatory for short options too.  
 
-__``-d --delay=DELAY``__ --> Delay between updates, in tenths of seconds ``atop -d 3``  
+__``-d --delay=DELAY``__ --> Delay between updates, in tenths of seconds: ``atop -d 3``  
 
-__``-C --no-color --no-colour``__ --> Start htop in monochrome mode ``atop -C``  
+__``-C --no-color --no-colour``__ --> Start htop in monochrome mode: ``atop -C``  
 
 ![No color](/htopImages/screenshot_02.png)  
 
-__``-h --help``__ --> Display a help message and exit ``atop -h``  
+__``-h --help``__ --> Display a help message and exit: ``atop -h``  
 
 ![Help](/htopImages/screenshot_03.png)  
 
-__``-u --user=USERNAME``__ --> Show only the processes of a given user ``atop -u username``  
+__``-u --user=USERNAME``__ --> Show only the processes of a given user: ``atop -u username``  
 
 ![Username](/htopImages/screenshot_04.png)  
 
-__``-p``__ --> Start working thread for pagemap memory stats ``atop -p PIDnumber``  
+__``-p``__ --> Start working thread for pagemap memory stats: ``atop -p PIDnumber``  
 
 ![PID number](/htopImages/screenshot_05.png)  
 
-__``-s --sort-key COLUMN``__ --> Sort by this column (use --sort-key help for a column list) ``atop -s nameofcolumn``  
+__``-s --sort-key COLUMN``__ --> Sort by this column (use --sort-key help for a column list): ``atop -s nameofcolumn``  
 
 ![Sort](/htopImages/screenshot_06.png)  
 
-__``-v --version``__ --> Output version information and exit  ``atop -v``  
+__``-v --version``__ --> Output version information and exit:  ``atop -v``  
 
 ![Version](/htopImages/screenshot_07.png)  
 
 # Interactive Commands
 
-The following commands are supported while in htop:  
+The following commands are supported while in htop is running:  
 
 __``Arrows, PgUP, PgDn, Home, End``__ --> Scroll the process list.  
 
