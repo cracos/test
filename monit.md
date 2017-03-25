@@ -6,7 +6,7 @@ Monit has a ability to start a process if it is not running, restart a process i
 
 The monit has user friendly web interface where you can directly view the system status and setup up processes using native HTTP(S) web server or via the command line interface. This means you must have web server like __Apache__ or __Nginx__ installed on your system to access and view monit web interface.
 
-### nstalling Monit
+### Installing Monit
 
 For Ubuntu/Debian/Linux Mint user’s can easily install using apt-get command as shown.  
 ```vim
