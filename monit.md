@@ -37,7 +37,7 @@ use address localhost  # only accept connection from localhost
 allow localhost        # allow localhost to connect to the server and
 allow admin:monit      # require user 'admin' with password 'monit'
 ```
-Once you’ve configured it, you need to start the monit service to reload the new configuration settings.
+Once you’ve configured it, you need to start the monit service or reload the new configuration settings.
 ```vim
 $ sudo /etc/init.d/monit start
 ```
@@ -92,4 +92,16 @@ if 5 restarts within 5 cycles then timeout
 Once you’ve configured all programs for monitoring, check monit syntax for errors. If found any errors fix them, it’s not so tough to figure out what’s went wrong. When you get message like “Control file syntax OK“, or if you see no errors, you can proceed ahead.
 ```vim
 $ sudo monit -t
+```
+After fixing all possible errors, you can type the following command to start or reload the monit service.
+```vim
+$ sudo /etc/init.d/monit start
+```
+or
+```vim
+$ sudo monit reload
+```
+You can verify that monit service is started by checking log file.
+```vim
+$ sudo tail -f /var/log/monit.log
 ```
