@@ -2,7 +2,7 @@
 
 __Monit__ is a free open source and very useful tool that automatically monitors and manages __server process, files, directories, checksums, permissions, filesystems__ and services like __Apache, Nginx, MySQL, FTP, SSH, Sendmail__ and so on in a __UNIX/Linux__ based systems and provides an excellent and helpful monitoring functionality to system administrators.
 
-Monit has a ability to start a process if it is not running, restart a process if not responding and stop a process if uses high resources. Additionally you can also use Monit to Monitor __files, directories__ and __filesystems for changes, checksum changes, file size changes__ or __timestamp changes__. With Monit you can able to monitor remote hosts __TCP/IP port__, __server protocols__ and __ping__. Monit keeps its own log file and alerts about any critical error conditions and recovery status.
+Monit has a ability to start a process if it is not running, restart a process if not responding and stop a process if uses high resources. Additionally you can also use Monit to monitor __files, directories__ and __filesystems for changes, checksum changes, file size changes__ or __timestamp changes__. With Monit you can able to monitor remote hosts __TCP/IP port__, __server protocols__ and __ping__. Monit keeps its own log file and alerts about any critical error conditions and recovery status.
 
 The monit has user friendly web interface where you can directly view the system status and setup up processes using native HTTP(S) web server or via the command line interface. This means you must have web server like __Apache__ or __Nginx__ installed on your system to access and view monit web interface.
 
