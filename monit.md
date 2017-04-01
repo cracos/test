@@ -20,16 +20,29 @@ Monit can be started up with a command that then keeps it running in the backgro
 ```vim
 $ monit
 ```
+![monit start](monitImages/monitStart.png)
+
 if you get "error connecting to the monit daemon" you should check next thing:
 * Make sure that you set ``startup=1`` in ``/etc/default/monit``
-Typing monit status displays monit’s details:  
+
+![monit](monitImages/monitsetSU1.png)
+
+Typing monit status displays monit’s details: 
+
+![monit](monitImages/monitDetails.png)
+
 ### Configuring Monit
 In fact the configuration files are created to be very easily readable and making them easier for users to understand. It is designed to monitor the running services in every 2 minutes and keeps the logs in “__/var/log/monit__“.
+
+![monit](monitImages/monitconLog.png)
+
 ### Web Service
 __Monit__ has it’s web interface that runs on __port 2812__ using web server. To enable web interface you need to make changes in monit configuration file. The main configuration file of monit located at ``/etc/monit/monitrc`` file for (Ubuntu/Debian/Linux Mint). Open this file using your choice of editor.
 ```vim
 $ sudo nano /etc/monit/monitrc
 ```
+![monit](monitImages/monitConfigFile.png)
+
 Next, uncomment the following section and add the IP address or domain name of your server, allow anyone to connect and change monit user and password or you can use default ones.
 ```bash
 set httpd port 2812 and
@@ -37,6 +50,8 @@ use address localhost  # only accept connection from localhost
 allow localhost        # allow localhost to connect to the server and
 allow admin:monit      # require user 'admin' with password 'monit'
 ```
+![monit](monitImages/monitPort2812.png)
+
 Once you’ve configured it, you need to start the monit service or reload the new configuration settings.
 ```vim
 $ sudo /etc/init.d/monit start
@@ -46,6 +61,9 @@ or
 $ sudo monit reload
 ```
 Now, you will able to access the monit web interface by navigating to the __“http://localhost:2812”__ or __“http://example.com:2812“__. Then enter user name as “__admin__” and password as “__monit__“. You should get screen similar to below.  
+
+![monit](monitImages/monitWebService.png)
+
 ### Adding Monitoring Services
 Once monit web interface correctly setup, start adding the programs that you want to monitor into the __/etc/monit/monitrc__ file for (Ubuntu/Debian/Linux Mint) at the bottom.
 
