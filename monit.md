@@ -34,8 +34,6 @@ Typing monit status displays monit’s details:
 ### Configuring Monit
 In fact the configuration files are created to be very easily readable and making them easier for users to understand. It is designed to monitor the running services in every 2 minutes and keeps the logs in “__/var/log/monit__“.
 
-![monit](monitImages/monitconLog.png)
-
 ### Web Service
 __Monit__ has it’s web interface that runs on __port 2812__ using web server. To enable web interface you need to make changes in monit configuration file. The main configuration file of monit located at ``/etc/monit/monitrc`` file for (Ubuntu/Debian/Linux Mint). Open this file using your choice of editor.
 ```vim
@@ -123,3 +121,9 @@ You can verify that monit service is started by checking log file.
 ```vim
 $ sudo tail -f /var/log/monit.log
 ```
+
+![monit](monitImages/monitLog.png)
+
+and you can see in the web service
+
+![monit](monitImages/monitWebService2.png)
