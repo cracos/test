@@ -127,3 +127,65 @@ $ sudo tail -f /var/log/monit.log
 and you can see in the web service
 
 ![monit](monitImages/monitWebService2.png)
+
+### command-line options
+
+The following options are recognized by monit. However, it is recommended that you set options (when applicable) directly in the monitrc control file.
+
+General Options and Arguments
+
+__-c__ --> file Use this control file
+
+__-d__ --> n Run as a daemon once per n seconds
+
+__-g__ --> Set group name for start, stop, restart, monitor and unmonitor.
+
+__-l__ --> logfile Print log information to this file
+
+__-p__ --> pidfile Use this lock file in daemon mode
+
+__-s__ --> statefile Write state information to this file
+
+__-I__ --> Do not run in background (needed for run from init)
+
+__-t__ --> Run syntax check for the control file
+
+__-v__ --> Verbose mode, work noisy (diagnostic output)
+
+__-H__ --> [filename] Print MD5 and SHA1 hashes of the file or of stdin if the filename is omitted; Monit will exit afterwards
+
+__-V__ --> Print version number and patch level
+
+__-h__ --> Print a help text
+
+In addition to the options above, Monit can be started with one of the following action arguments; Monit will then execute the action and exit without transforming itself to a daemon.
+
+__start all__ --> Start all services listed in the control file and enable monitoring for them. If the group option is set, only start and enable monitoring of services in the named group (no "all" verb is required in this case).
+
+__start name__ --> Start the named service and enable monitoring for it. The name is a service entry name from the monitrc file.
+
+__stop all__ --> Stop all services listed in the control file and disable their monitoring. If the group option is set, only stop and disable monitoring of the services in the named group (no "all" verb is required in this case).
+
+__stop name__ --> Stop the named service and disable its monitoring. The name is a service entry name from the monitrc file.
+
+__restart all__ --> Stop and start all services. If the group option is set, only restart the services in the named group (no "all" verb is required in this case).
+
+__restart name__ --> Restart the named service. The name is a service entry name from the monitrc file.
+
+__monitor all__ --> Enable monitoring of all services listed in the control file. If the group option is set, only start monitoring of services in the named group (no "all" verb is required in this case).
+
+__monitor name__ --> Enable monitoring of the named service. The name is a service entry name from the monitrc file. Monit will also enable monitoring of all services this service depends on.
+
+__unmonitor all__ --> Disable monitoring of all services listed in the control file. If the group option is set, only disable monitoring of services in the named group (no "all" verb is required in this case).
+
+__unmonitor name__ --> Disable monitoring of the named service. The name is a service entry name from the monitrc file. Monit will also disable monitoring of all services that depends on this service.
+
+__status__ --> Print full status information for each service.
+
+__summary__ --> Print short status information for each service.
+
+__reload__ --> Reinitialize a running Monit daemon, the daemon will reread its configuration, close and reopen log files.
+
+__quit__ --> Kill a Monit daemon process
+
+__validate__ --> Check all services listed in the control file. This action is also the default behavior when Monit runs in daemon mode.
